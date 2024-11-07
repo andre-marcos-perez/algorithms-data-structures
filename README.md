@@ -25,3 +25,9 @@ Install them using the following command:
 chmod +x bin/install-git-hooks.sh
 ./bin/install-git-hooks.sh
 ```
+
+## Data structures
+
+### Sequences
+
+- [Linked List](/structures/sequences/linked_list.py).
