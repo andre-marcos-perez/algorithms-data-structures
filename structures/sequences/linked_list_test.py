@@ -74,6 +74,16 @@ class TestDynamicOperations(unittest.TestCase):
         item = self.struct.get(2)
         self.assertEqual(item, 2)
 
+    def test_delete(self):
+        item = self.struct.delete(1)
+        self.assertEqual(item, 2)
+        # prev
+        item = self.struct.get(0)
+        self.assertEqual(item, 1)
+        # current
+        item = self.struct.get(1)
+        self.assertEqual(item, 3)
+
 
 if __name__ == "__main__":
     unittest.main()
