@@ -40,7 +40,7 @@ class LinkedList(Sequence):
         if i == 0:
             self.insert_first(x)
         node = LinkedListNode(x)
-        prev_node = self.get(i-1)
+        prev_node = self.get(i - 1)
         node.next = prev_node.next
         prev_node.next = node
         self.size += 1
@@ -48,7 +48,7 @@ class LinkedList(Sequence):
     def delete(self, i: int) -> T:  # O(i)
         if i == 0:
             return self.delete_first()
-        prev_node = self.get(i-1)
+        prev_node = self.get(i - 1)
         item = prev_node.next.item
         prev_node.next = prev_node.next.next
         self.size -= 1
@@ -70,4 +70,4 @@ class LinkedList(Sequence):
         self.insert(self.size, item)
 
     def delete_last(self) -> T:  # O(n)
-        return self.delete(self.size-1)
+        return self.delete(self.size - 1)
